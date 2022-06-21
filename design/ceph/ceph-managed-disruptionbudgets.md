@@ -13,7 +13,7 @@
 ### OSDs
 
 OSDs do not fit under the single PodDisruptionBudget pattern. Ceph's ability to tolerate pod disruptions in one failure domain is dependent on the overall health of the cluster.
-Even if an upgrade agent were only to drain one node at a time, Ceph would have to wait until there were no undersized PGs before moving on the the next.
+Even if an upgrade agent were only to drain one node at a time, Ceph would have to wait until there were no undersized PGs before moving on the next.
 
 The failure domain will be determined by the smallest failure domain of all the Ceph Pools in that cluster.
 We begin with creating a single PodDisruptionBudget for all the OSD with maxUnavailable=1. This will allow one OSD to go down anytime. Once the user drains a node and an OSD goes down, we determine the failure domain for the draining OSD (using the OSD deployment labels). Then we create blocking PodDisruptionBudgets (maxUnavailable=0) for all other failure domains and delete the main PodDisruptionBudget. This blocks OSDs from going down in multiple failure domains simultaneously.

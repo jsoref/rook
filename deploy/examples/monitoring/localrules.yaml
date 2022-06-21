@@ -309,7 +309,7 @@ spec:
               soon, but the normal process of relocating the data on the device to other
               OSDs in the cluster is blocked.
 
-              Check the the cluster has available freespace. It may be necessary to add
+              Check the cluster has available freespace. It may be necessary to add
               more disks to the cluster to allow the data from the failing device to
               successfully migrate.
 
