@@ -109,7 +109,7 @@ The plan was to identify OSD Deployments which need updated by looking at the OS
 (1) a `rook-version` label that does not match the current version of the Rook operator AND/OR
 (2) a `ceph-version` label that does not match the current Ceph version being deployed. This is an
 invalid optimization that does not account for OSD Deployments changing due to CephCluster resource
-updates. Instead of trying to optimize, it is better to always update OSD Deplyments and rely on the
+updates. Instead of trying to optimize, it is better to always update OSD Deployments and rely on the
 lower level update calls to finish quickly when there is no update to apply.
 
 ### User configuration
