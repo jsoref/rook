@@ -293,7 +293,7 @@ spec:
             description: |
               The device health module has determined that the number of devices predicted to
               fail can not be remediated automatically, since it would take too many osd's out of
-              the cluster, impacting performance and potentially availabililty. You should add new
+              the cluster, impacting performance and potentially availability. You should add new
               OSDs to the cluster to allow data to be relocated to avoid the data integrity issues.
         - alert: CephDeviceFailureRelocationIncomplete
           expr: ceph_health_detail{name="DEVICE_HEALTH_IN_USE"} == 1
