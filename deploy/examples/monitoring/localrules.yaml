@@ -767,7 +767,7 @@ spec:
           annotations:
             summary: One or more Ceph pools are getting full
             description: |
-              A pool has exceeeded it warning (percent full) threshold, or the OSDs
+              A pool has exceeded it warning (percent full) threshold, or the OSDs
               supporting the pool have reached their NEARFULL thresholds. Writes may
               continue, but you are at risk of the pool going read only if more capacity
               isn't made available.
