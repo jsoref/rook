@@ -1735,8 +1735,8 @@ type AMQPEndpointSpec struct {
 	// Indicate whether the server certificate is validated by the client or not
 	// +optional
 	DisableVerifySSL bool `json:"disableVerifySSL,omitempty"`
-	// The ack level required for this topic (none/broker/routeable)
-	// +kubebuilder:validation:Enum=none;broker;routeable
+	// The ack level required for this topic (none/broker/routable)
+	// +kubebuilder:validation:Enum=none;broker;routable
 	// +kubebuilder:default=broker
 	// +optional
 	AckLevel string `json:"ackLevel,omitempty"`
