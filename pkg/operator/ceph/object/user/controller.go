@@ -268,7 +268,7 @@ func (r *ReconcileObjectStoreUser) reconcile(request reconcile.Request) (reconci
 }
 
 func (r *ReconcileObjectStoreUser) reconcileCephUser(cephObjectStoreUser *cephv1.CephObjectStoreUser) (reconcile.Result, error) {
-	err := r.createorUpdateCephUser(cephObjectStoreUser)
+	err := r.createOrUpdateCephUser(cephObjectStoreUser)
 	if err != nil {
 		return reconcile.Result{}, errors.Wrapf(err, "failed to create/update object store user %q", cephObjectStoreUser.Name)
 	}
@@ -276,7 +276,7 @@ func (r *ReconcileObjectStoreUser) reconcileCephUser(cephObjectStoreUser *cephv1
 	return reconcile.Result{}, nil
 }
 
-func (r *ReconcileObjectStoreUser) createorUpdateCephUser(u *cephv1.CephObjectStoreUser) error {
+func (r *ReconcileObjectStoreUser) createOrUpdateCephUser(u *cephv1.CephObjectStoreUser) error {
 	logger.Infof("creating ceph object user %q in namespace %q", u.Name, u.Namespace)
 
 	logCreateOrUpdate := fmt.Sprintf("retrieved existing ceph object user %q", u.Name)
