@@ -559,7 +559,7 @@ spec:
             description: >
               Data redundancy may be reduced, or is at risk, since one or more OSDs are at or above their
               'full' threshold. Add more capacity to the cluster, or delete unwanted data.
-        - alert: CephPGUnavilableBlockingIO
+        - alert: CephPGUnavailableBlockingIO
           # PG_AVAILABILITY, but an OSD is not in a DOWN state
           expr: ((ceph_health_detail{name="PG_AVAILABILITY"} == 1) - scalar(ceph_health_detail{name="OSD_DOWN"})) == 1
           for: 1m
