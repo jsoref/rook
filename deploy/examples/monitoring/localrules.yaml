@@ -597,7 +597,7 @@ spec:
             summary: Placement group(s) have not been scrubbed
             description: |
               One or more PGs have not been scrubbed recently. The scrub process is a data integrity
-              feature, protectng against bit-rot. It checks that objects and their metadata (size and
+              feature, protecting against bit-rot. It checks that objects and their metadata (size and
               attributes) match across object replicas. When PGs miss their scrub window, it may
               indicate the scrub window is too small, or PGs were not in a 'clean' state during the
               scrub window.
@@ -630,7 +630,7 @@ spec:
             summary: Placement group(s) have not been deep scrubbed
             description: |
               One or more PGs have not been deep scrubbed recently. Deep scrub is a data integrity
-              feature, protectng against bit-rot. It compares the contents of objects and their
+              feature, protecting against bit-rot. It compares the contents of objects and their
               replicas for inconsistency. When PGs miss their deep scrub window, it may indicate
               that the window is too small or PGs were not in a 'clean' state during the deep-scrub
               window.
