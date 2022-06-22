@@ -56,7 +56,7 @@ An OSD can be down due to reasons other than node drain, say, disk failure. In s
 
 ### Mon, Mgr, MDS, RGW, RBDMirror
 
-Since there is no strict failure domain requirement for each of these, and they are not logically grouped, a stactic PDB will suffice.
+Since there is no strict failure domain requirement for each of these, and they are not logically grouped, a static PDB will suffice.
 
 A single PodDisruptionBudget is created and owned by the respective controllers, and updated only according to changes in the CRDs that change the amount of pods.
 
