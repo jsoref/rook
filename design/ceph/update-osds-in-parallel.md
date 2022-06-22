@@ -9,7 +9,7 @@ support large clusters, Rook should be able to update (and upgrade) multiple OSD
 
 ## High-level requirements
 
-### Ability to set a maximumum number of OSDs to be updated simultaneously
+### Ability to set a maximum number of OSDs to be updated simultaneously
 In the worst (but unlikely) case, all OSDs which are updated for a given parallel update operation
 might fail to come back online after they are updated. Users may wish to limit the number of OSDs
 updated in parallel in order to avoid too many OSDs failing in this way.
