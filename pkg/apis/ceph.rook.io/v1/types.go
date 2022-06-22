@@ -695,10 +695,10 @@ type MirroringStatusSpec struct {
 	// PoolMirroringStatus is the mirroring status of a pool
 	// +optional
 	PoolMirroringStatus `json:",inline"`
-	// LastChecked is the last time time the status was checked
+	// LastChecked is the last time the status was checked
 	// +optional
 	LastChecked string `json:"lastChecked,omitempty"`
-	// LastChanged is the last time time the status last changed
+	// LastChanged is the last time the status last changed
 	// +optional
 	LastChanged string `json:"lastChanged,omitempty"`
 	// Details contains potential status errors
@@ -805,10 +805,10 @@ type SnapshotScheduleStatusSpec struct {
 	// +nullable
 	// +optional
 	SnapshotSchedules []SnapshotSchedulesSpec `json:"snapshotSchedules,omitempty"`
-	// LastChecked is the last time time the status was checked
+	// LastChecked is the last time the status was checked
 	// +optional
 	LastChecked string `json:"lastChecked,omitempty"`
-	// LastChanged is the last time time the status last changed
+	// LastChanged is the last time the status last changed
 	// +optional
 	LastChanged string `json:"lastChanged,omitempty"`
 	// Details contains potential status errors
@@ -1126,10 +1126,10 @@ type FilesystemMirroringInfoSpec struct {
 	// +nullable
 	// +optional
 	FilesystemMirroringAllInfo []FilesystemMirroringInfo `json:"daemonsStatus,omitempty"`
-	// LastChecked is the last time time the status was checked
+	// LastChecked is the last time the status was checked
 	// +optional
 	LastChecked string `json:"lastChecked,omitempty"`
-	// LastChanged is the last time time the status last changed
+	// LastChanged is the last time the status last changed
 	// +optional
 	LastChanged string `json:"lastChanged,omitempty"`
 	// Details contains potential status errors
@@ -1143,10 +1143,10 @@ type FilesystemSnapshotScheduleStatusSpec struct {
 	// +nullable
 	// +optional
 	SnapshotSchedules []FilesystemSnapshotSchedulesSpec `json:"snapshotSchedules,omitempty"`
-	// LastChecked is the last time time the status was checked
+	// LastChecked is the last time the status was checked
 	// +optional
 	LastChecked string `json:"lastChecked,omitempty"`
-	// LastChanged is the last time time the status last changed
+	// LastChanged is the last time the status last changed
 	// +optional
 	LastChanged string `json:"lastChanged,omitempty"`
 	// Details contains potential status errors
@@ -1735,8 +1735,8 @@ type AMQPEndpointSpec struct {
 	// Indicate whether the server certificate is validated by the client or not
 	// +optional
 	DisableVerifySSL bool `json:"disableVerifySSL,omitempty"`
-	// The ack level required for this topic (none/broker/routeable)
-	// +kubebuilder:validation:Enum=none;broker;routeable
+	// The ack level required for this topic (none/broker/routable)
+	// +kubebuilder:validation:Enum=none;broker;routable
 	// +kubebuilder:default=broker
 	// +optional
 	AckLevel string `json:"ackLevel,omitempty"`

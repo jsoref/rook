@@ -346,10 +346,10 @@ spec:
                       description: Details contains potential status errors
                       type: string
                     lastChanged:
-                      description: LastChanged is the last time time the status last changed
+                      description: LastChanged is the last time the status last changed
                       type: string
                     lastChecked:
-                      description: LastChecked is the last time time the status was checked
+                      description: LastChecked is the last time the status was checked
                       type: string
                     summary:
                       description: Summary is the mirroring status summary
@@ -405,10 +405,10 @@ spec:
                       description: Details contains potential status errors
                       type: string
                     lastChanged:
-                      description: LastChanged is the last time time the status last changed
+                      description: LastChanged is the last time the status last changed
                       type: string
                     lastChecked:
-                      description: LastChecked is the last time time the status was checked
+                      description: LastChecked is the last time the status was checked
                       type: string
                     snapshotSchedules:
                       description: SnapshotSchedules is the list of snapshots scheduled
@@ -640,11 +640,11 @@ spec:
                       properties:
                         ackLevel:
                           default: broker
-                          description: The ack level required for this topic (none/broker/routeable)
+                          description: The ack level required for this topic (none/broker/routable)
                           enum:
                             - none
                             - broker
-                            - routeable
+                            - routable
                           type: string
                         disableVerifySSL:
                           description: Indicate whether the server certificate is validated by the client or not
@@ -1519,7 +1519,7 @@ spec:
                                       conditions:
                                         description: Current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to 'ResizeStarted'.
                                         items:
-                                          description: PersistentVolumeClaimCondition contails details about state of pvc
+                                          description: PersistentVolumeClaimCondition contains details about state of pvc
                                           properties:
                                             lastProbeTime:
                                               description: Last time we probed the condition.
@@ -1718,7 +1718,7 @@ spec:
                             conditions:
                               description: Current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to 'ResizeStarted'.
                               items:
-                                description: PersistentVolumeClaimCondition contails details about state of pvc
+                                description: PersistentVolumeClaimCondition contains details about state of pvc
                                 properties:
                                   lastProbeTime:
                                     description: Last time we probed the condition.
@@ -2722,7 +2722,7 @@ spec:
                                     conditions:
                                       description: Current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to 'ResizeStarted'.
                                       items:
-                                        description: PersistentVolumeClaimCondition contails details about state of pvc
+                                        description: PersistentVolumeClaimCondition contains details about state of pvc
                                         properties:
                                           lastProbeTime:
                                             description: Last time we probed the condition.
@@ -4056,7 +4056,7 @@ spec:
                                     conditions:
                                       description: Current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to 'ResizeStarted'.
                                       items:
-                                        description: PersistentVolumeClaimCondition contails details about state of pvc
+                                        description: PersistentVolumeClaimCondition contains details about state of pvc
                                         properties:
                                           lastProbeTime:
                                             description: Last time we probed the condition.
@@ -4265,7 +4265,7 @@ spec:
                               conditions:
                                 description: Current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to 'ResizeStarted'.
                                 items:
-                                  description: PersistentVolumeClaimCondition contails details about state of pvc
+                                  description: PersistentVolumeClaimCondition contains details about state of pvc
                                   properties:
                                     lastProbeTime:
                                       description: Last time we probed the condition.
@@ -6462,10 +6462,10 @@ spec:
                       description: Details contains potential status errors
                       type: string
                     lastChanged:
-                      description: LastChanged is the last time time the status last changed
+                      description: LastChanged is the last time the status last changed
                       type: string
                     lastChecked:
-                      description: LastChecked is the last time time the status was checked
+                      description: LastChecked is the last time the status was checked
                       type: string
                   type: object
                 observedGeneration:
@@ -6482,10 +6482,10 @@ spec:
                       description: Details contains potential status errors
                       type: string
                     lastChanged:
-                      description: LastChanged is the last time time the status last changed
+                      description: LastChanged is the last time the status last changed
                       type: string
                     lastChecked:
-                      description: LastChecked is the last time time the status was checked
+                      description: LastChecked is the last time the status was checked
                       type: string
                     snapshotSchedules:
                       description: SnapshotSchedules is the list of snapshots scheduled
