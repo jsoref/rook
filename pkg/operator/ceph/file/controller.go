@@ -184,7 +184,7 @@ func (r *ReconcileCephFilesystem) reconcile(request reconcile.Request) (reconcil
 	}
 
 	// update observedGeneration local variable with current generation value,
-	// because generation can be changed before reconile got completed
+	// because generation can be changed before reconcile got completed
 	// CR status will be updated at end of reconcile, so to reflect the reconcile has finished
 	observedGeneration := cephFilesystem.ObjectMeta.Generation
 
