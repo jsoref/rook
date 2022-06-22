@@ -360,7 +360,7 @@ func (r *ReconcileCephFilesystem) reconcile(request reconcile.Request) (reconcil
 				}
 
 				logger.Info("reconciling add cephfs-mirror peer configuration")
-				err = r.reconcileAddBoostrapPeer(cephFilesystem, request.NamespacedName)
+				err = r.reconcileAddBootstrapPeer(cephFilesystem, request.NamespacedName)
 				if err != nil {
 					return opcontroller.ImmediateRetryResult, *cephFilesystem,
 						errors.Wrapf(err, "failed to configure mirroring for filesystem %q.", cephFilesystem.Name)
@@ -473,7 +473,7 @@ func (r *ReconcileCephFilesystem) reconcileMirroring(cephFilesystem *cephv1.Ceph
 	return nil
 }
 
-func (r *ReconcileCephFilesystem) reconcileAddBoostrapPeer(cephFilesystem *cephv1.CephFilesystem, namespacedName types.NamespacedName) error {
+func (r *ReconcileCephFilesystem) reconcileAddBootstrapPeer(cephFilesystem *cephv1.CephFilesystem, namespacedName types.NamespacedName) error {
 	if cephFilesystem.Spec.Mirroring.Peers == nil {
 		return nil
 	}

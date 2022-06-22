@@ -223,7 +223,7 @@ func (r *ReconcileCephRBDMirror) reconcile(request reconcile.Request) (reconcile
 
 	// Add bootstrap peer if any
 	logger.Debug("reconciling ceph rbd mirror peers addition")
-	reconcileResponse, err = r.reconcileAddBoostrapPeer(cephRBDMirror, request.NamespacedName)
+	reconcileResponse, err = r.reconcileAddBootstrapPeer(cephRBDMirror, request.NamespacedName)
 	if err != nil {
 		return opcontroller.ImmediateRetryResult, *cephRBDMirror, errors.Wrap(err, "failed to add ceph rbd mirror peer")
 	}

@@ -322,7 +322,7 @@ func (r *ReconcileCephBlockPool) reconcile(request reconcile.Request) (reconcile
 
 		// Add bootstrap peer if any
 		logger.Debug("reconciling ceph bootstrap peers import")
-		reconcileResponse, err = r.reconcileAddBoostrapPeer(cephBlockPool, request.NamespacedName)
+		reconcileResponse, err = r.reconcileAddBootstrapPeer(cephBlockPool, request.NamespacedName)
 		if err != nil {
 			return reconcileResponse, *cephBlockPool, errors.Wrap(err, "failed to add ceph rbd mirror peer")
 		}
